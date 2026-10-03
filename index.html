@@ -1,0 +1,205 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Lab 05 - JavaScript</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 25px;
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+            color: #1e293b;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        header {
+            background: #173b67;
+            color: white;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+        }
+
+        header h1 {
+            margin-top: 0;
+        }
+
+        .section {
+            background: white;
+            padding: 22px;
+            margin-bottom: 25px;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px #0000000d;
+        }
+
+        .section h2 {
+            color: #173b67;
+            margin-top: 0;
+        }
+
+        .card {
+            background: #f8fafc;
+            border: 1px solid #dbe3ed;
+            border-left: 5px solid #2563eb;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 12px 0;
+            overflow-wrap: anywhere;
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: #173b67;
+        }
+
+        button {
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 11px 16px;
+            margin: 5px 5px 5px 0;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #173b67;
+        }
+
+        input {
+            padding: 11px;
+            width: min(100%, 280px);
+            border: 1px solid #cbd5e1;
+            border-radius: 6px;
+            margin: 5px 5px 5px 0;
+        }
+
+        .error {
+            color: #b91c1c;
+            background: #fee2e2;
+            padding: 12px;
+            border-radius: 6px;
+        }
+
+        .success {
+            color: #166534;
+        }
+
+        .output {
+            margin-top: 15px;
+            line-height: 1.8;
+        }
+
+        .stats {
+            background: #dbeafe;
+            padding: 15px;
+            border-radius: 8px;
+            margin-top: 15px;
+        }
+
+        footer {
+            text-align: center;
+            color: #64748b;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <header>
+            <h1>University Student Portal</h1>
+            <p>Full Stack Web Development - Lab 05</p>
+            <p>ES6, Modules, Callbacks, Promises and Async/Await</p>
+        </header>
+
+        <!-- TASK 1 -->
+        <section class="section">
+            <h2>Task 1: Course Enrollment Manager</h2>
+            <div id="task1Output" class="output"></div>
+        </section>
+
+        <!-- TASK 2 -->
+        <section class="section">
+            <h2>Task 2: Student Utility Module</h2>
+            <div id="task2Output" class="output"></div>
+        </section>
+
+        <!-- TASK 3 -->
+        <section class="section">
+            <h2>Task 3: Online Examination Workflow</h2>
+
+            <p>Run the workflow with a valid or empty roll number.</p>
+
+            <input
+                type="text"
+                id="examRoll"
+                value="BSCS-001"
+                placeholder="Enter roll number"
+            >
+
+            <button id="startExam">Start Exam Workflow</button>
+
+            <div id="task3Output" class="output"></div>
+        </section>
+
+        <!-- TASK 4 -->
+        <section class="section">
+            <h2>Task 4: University Result Portal</h2>
+
+            <h3>Search Student Result</h3>
+
+            <input
+                type="text"
+                id="searchRoll"
+                value="BSCS-001"
+                placeholder="Enter roll number"
+            >
+
+            <button id="searchButton">Search Result</button>
+
+            <div id="searchOutput" class="output"></div>
+
+            <hr>
+
+            <h3>Promise Chain Demonstration</h3>
+
+            <button id="promiseButton">Run Promise Chain</button>
+
+            <div id="promiseOutput" class="output"></div>
+
+            <hr>
+
+            <h3>All Students Results</h3>
+
+            <button id="loadAllButton">Load All Results</button>
+
+            <div id="allResultsOutput" class="output"></div>
+
+            <div id="statisticsOutput" class="stats"></div>
+        </section>
+
+        <footer>
+            Lab 05 | JavaScript ES6 Practice
+        </footer>
+
+    </div>
+
+    
+    <script type="module" src="lab05.js"></script>
+</body>
+</html>
